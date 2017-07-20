@@ -3,7 +3,7 @@
   <input type="text" name="figure[name]" id="figure_name">
   <h5>Choose existing titles: </h5>
   <% Title.all.each do |title| %>
-  <input type="checkbox" name="figure[title_ids][]" id="title_<%=title.id%>" value="title_<%=title.id%>"><%=title.name%></input>
+  <input type="checkbox" name="figure[title_ids][]" id="title_<%=title.id%>" value="<%=title.id%>"><%=title.name%></input>
   <%end%>
   <h5>and/or create a title: </h5>
   <label for="title[name]">New title: </label>
@@ -11,7 +11,7 @@
   <br>
   <h5>Choose existing landmarks: </h5>
   <% Landmark.all.each do |land| %>
-  <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=land.id%>" value="landmark_<%=land.id%>"><%=land.name%></input>
+  <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=land.id%>" value="<%=land.id%>"><%=land.name%></input>
   <%end%>
   <h5>and/or create a landmark: </h5>
   <label for="landmark[name]">New landmark: </label>
